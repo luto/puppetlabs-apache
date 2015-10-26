@@ -77,6 +77,7 @@ class apache (
   $package_ensure         = 'installed',
   $use_optional_includes  = $::apache::params::use_optional_includes,
   $use_systemd            = $::apache::params::use_systemd,
+  $additional_includes    = [],
 ) inherits ::apache::params {
   validate_bool($default_vhost)
   validate_bool($default_ssl_vhost)
